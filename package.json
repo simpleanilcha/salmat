@@ -1,0 +1,15 @@
+{
+  "name": "salmat",
+  "version": "1.0.0",
+  "description": "Prject given by Nirazan about salmat.",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "Anil Maharjan",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
