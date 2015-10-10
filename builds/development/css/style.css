@@ -66,7 +66,7 @@ body{
 .main-banner ul{
 	text-align:center;
 	display: inline-block;
-	margin-top:134px;
+	margin-top:130px;
 }
 .main-banner ul li{
 	font-family: sketchrockwell;
@@ -101,7 +101,7 @@ body{
 .few-about p{
 	text-align: center;
 	color: #FFF;
-	padding:15px 0px 0px 0px;
+	padding:10px 0px 0px 0px;
 }
 .few-about p span{
 	color: #EF2B6D;
@@ -114,11 +114,11 @@ body{
 .few-about p:last-child{
 	font-family: VAGRounded;
 	font-size: 14px;
+	line-height: 16px;
 }
 .main-feature{
 	position: relative;
-	margin:25px auto 0;
-	/*max-width:970px;*/
+	margin:24px auto 0;
 }
 .feature{
 	position: relative;
@@ -127,7 +127,7 @@ body{
 .feature h2{
 	color: #ef2b6d;
 	font-family: sketchrockwell;
-	font-size: 35px;
+	font-size: 25px;
 }
 .feature p{
 	color: #FFF;
@@ -173,6 +173,7 @@ body{
 	background:url(../images/second-main-bg.png) no-repeat top center;
 	min-height: 876px;
 	padding-top: 96px;
+	margin-bottom: 20px;
 }
 .second-para-one{
 	font-size: 35px;
@@ -204,6 +205,13 @@ body{
     text-transform: uppercase;
     padding: 55px 0 0 28px;
     line-height: 75px;
+}
+.contact-do h2:before{
+	content:'+';
+	display: inline-block;
+    left: -20px;
+    position: absolute;
+    color:#ef2b6d;
 }
 .media-do h3{
 	padding:75px 0 60px 28px;
@@ -279,8 +287,19 @@ footer{
 	font-size: 30px;
 }
 .footer-part{
-	border-right:1px dotted #ccc;
+	border-right:1px dashed #fff;
+	position: relative;
 }
+
 .mid-part{
 	padding:0 50px;
+}
+.book-footer::after{
+	content:'';
+	display: inline-block;
+	background:url(../images/dotted-curve-footer.svg) no-repeat top center;
+	width: 86px;
+    height: 29px;
+    left: 38%;
+    position: absolute;
 }
