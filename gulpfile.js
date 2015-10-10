@@ -1,5 +1,5 @@
 var gulp = require ('gulp'),
-	sass = require ('gulp-sass'),
+	//sass = require ('gulp-sass'),
 	uglify = require ('gulp-uglify'),
 	rename = require ('gulp-rename'),
 	minifyCss = require ('gulp-minify-css'),
@@ -10,14 +10,14 @@ gulp.task('test', function(){
 	console.log('hello');
 });
 
-gulp.task('sass', function(){
-	gulp.src('components/scss/*.scss')
-	.pipe(sass({
-		outputStyle: 'expanded'
-	}).on('error', sass.logError))
-	.pipe(gulp.dest('././builds/development/css'))
-	.pipe(browserSync.stream());
-});
+// gulp.task('sass', function(){
+// 	gulp.src('components/scss/*.scss')
+// 	.pipe(sass({
+// 		outputStyle: 'expanded'
+// 	}).on('error', sass.logError))
+// 	.pipe(gulp.dest('././builds/development/css'))
+// 	.pipe(browserSync.stream());
+// });
 
 // uglify bootstrap.js to bootstrap.min.js
 gulp.task('uglifyPlugins', function(){
@@ -52,8 +52,10 @@ gulp.task('watch', function(){
             baseDir: "builds/development"
         }
     });
-	gulp.watch('components/scss/*.scss', ['sass']);
+	//gulp.watch('components/scss/*.scss', ['sass']);
 	gulp.watch("builds/development/*.html").on("change", browserSync.reload);
+	gulp.watch("builds/development/css/*.css").on("change", browserSync.reload);
+	gulp.watch("builds/development/images/*.*").on("change", browserSync.reload);
 });
 
 gulp.task('default', ['watch']);
